@@ -1,0 +1,8 @@
+{
+  "name": "RFC",
+  "app_id": "cf9c9752",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
