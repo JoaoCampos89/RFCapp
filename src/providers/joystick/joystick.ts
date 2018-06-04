@@ -63,11 +63,10 @@ export class JoystickProvider {
                 });
       }
     public handleJoystick(){
-          this.joystick.observeMoveElements().pipe(sample(interval(500)))
+          this.joystick.observeMoveElements()
+                    .pipe(sample(interval(500)))
                     .subscribe(data=>{
-                        this.http.post(this.robotIp,{command:command}).pipe(debounceTime(500));
-
-
+                        this.http.post(this.robotIp,{command:data}).subscribe(rsp=>console.log(rsp));
                     });
 
 
